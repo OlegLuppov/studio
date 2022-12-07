@@ -1,0 +1,5 @@
+import './reset.scss'
+import './index.scss'
+import './modules/header/scss/header.scss'
+import './modules/header/scss/header_search.scss'
+import './modules/header/scss/header_avtorization.scss'

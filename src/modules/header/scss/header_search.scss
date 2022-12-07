@@ -1,0 +1,114 @@
+@mixin backgroundImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin font {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.header_search {
+    height: 48px;
+    display: flex;
+    gap: 61px;
+    align-items: center;
+
+    .header_title-wrapper {
+        height: 32px;
+        display: flex;
+        gap: 16px;
+
+        .header_title {
+            width: 88px;
+            height: 24px;
+            background-image: url(../../assets/image/svg/header-title.svg);
+            @include backgroundImg()
+        }
+
+        .header_sity-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .header_sity-svg {
+                position: relative;
+                width: 32px;
+                height: 32px;
+                border: 1px solid #A7A7A7;
+                border-radius: 40px;
+
+            }
+
+            .header_sity-svg::after {
+                position: absolute;
+                top: 5px;
+                left: 9px;
+                content: '';
+                width: 11.75px;
+                height: 18px;
+                background-image: url(../../assets/image/svg/header-sity.svg);
+                @include backgroundImg()
+            }
+
+            .header_sity-title {
+                @include font()
+            }
+        }
+    }
+
+    .header_search-item {
+        height: 48px;
+        display: flex;
+        padding: 8px;
+        gap: 16px;
+        align-items: center;
+        background-color: #F1F1F1;
+        border-radius: 100px;
+
+        .search-svg {
+            width: 17px;
+            height: 17px;
+            background-image: url(../../assets/image/svg/search.svg);
+            @include backgroundImg()
+        }
+
+
+
+        .header_textfield-item {
+            width: 536px;
+            height: 22px;
+            @include font();
+            text-align: left;
+
+        }
+
+        ::-webkit-input-placeholder {
+            color: #767676;
+            text-align: center;
+
+        }
+
+        :-moz-placeholder {
+            color: #767676;
+            text-align: center;
+
+        }
+
+        ::-moz-placeholder {
+            color: #767676;
+            text-align: center;
+
+        }
+
+        :-ms-input-placeholder {
+            color: #767676;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 27px;
+
+    .header_wrapper-account {
+        display: flex;
+        align-items: center;
+        gap: 192.5px;
+    }
+}
