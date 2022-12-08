@@ -13,28 +13,35 @@
     text-align: center;
 }
 
+@mixin flexCenterVertical {
+    display: flex;
+    align-items: center;
+}
+
 .header_search {
     height: 48px;
-    display: flex;
+    @include flexCenterVertical();
     gap: 61px;
-    align-items: center;
 
     .header_title-wrapper {
         height: 32px;
         display: flex;
         gap: 16px;
 
-        .header_title {
+        .header_logo {
             width: 88px;
             height: 24px;
-            background-image: url(../../assets/image/svg/header-title.svg);
-            @include backgroundImg()
+            background-image: url(../../../assets/image/svg/header-title.svg);
+            @include backgroundImg();
+            cursor: pointer;
+
         }
 
         .header_sity-wrapper {
-            display: flex;
-            align-items: center;
+            @include flexCenterVertical();
             gap: 8px;
+            cursor: pointer;
+
 
             .header_sity-svg {
                 position: relative;
@@ -45,6 +52,8 @@
 
             }
 
+
+
             .header_sity-svg::after {
                 position: absolute;
                 top: 5px;
@@ -52,7 +61,7 @@
                 content: '';
                 width: 11.75px;
                 height: 18px;
-                background-image: url(../../assets/image/svg/header-sity.svg);
+                background-image: url(../../../assets/image/svg/header-sity.svg);
                 @include backgroundImg()
             }
 
@@ -62,19 +71,25 @@
         }
     }
 
+    .header_sity-wrapper:hover {
+        .header_sity-svg {
+            background-color: #F1F1F1;
+        }
+
+    }
+
     .header_search-item {
         height: 48px;
-        display: flex;
+        @include flexCenterVertical();
         padding: 8px;
         gap: 16px;
-        align-items: center;
         background-color: #F1F1F1;
         border-radius: 100px;
 
         .search-svg {
             width: 17px;
             height: 17px;
-            background-image: url(../../assets/image/svg/search.svg);
+            background-image: url(../../../assets/image/svg/search.svg);
             @include backgroundImg()
         }
 
@@ -110,5 +125,14 @@
             color: #767676;
             text-align: center;
         }
+
     }
+
+}
+
+@media (max-width:1250px) {
+    .header_search {
+        gap: 30px;
+    }
+
 }

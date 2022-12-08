@@ -4,13 +4,20 @@ header {
     left: 0;
     width: 100%;
     background-color: #FFFFFF;
-    display: flex;
-    justify-content: center;
     padding-top: 27px;
 
     .header_wrapper-account {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 192.5px;
+        padding-bottom: 22px;
+
+    }
+
+    @media (max-width:1250px) {
+        .header_wrapper-account {
+            gap: 30px;
+        }
     }
 }

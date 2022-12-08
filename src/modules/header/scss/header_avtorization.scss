@@ -26,11 +26,13 @@
     .like_wrapper {
         @include flexCenterVertical();
         gap: 10.5px;
+        cursor: pointer;
+
 
         .like_svg {
             width: 15px;
             height: 13.76px;
-            background-image: url(../../assets/image/svg/like.svg);
+            background-image: url(../../../assets/image/svg/like.svg);
         }
     }
 
@@ -38,6 +40,7 @@
     .account_wrapper {
         @include flexCenterVertical();
         gap: 7px;
+        cursor: pointer;
 
         .account_title {
             @include font();
@@ -46,7 +49,7 @@
         .account_avatar {
             width: 32px;
             height: 32px;
-            background-image: url(../../assets/image/png/avatar.png);
+            background-image: url(../../../assets/image/png/avatar.png);
         }
 
     }

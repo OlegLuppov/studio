@@ -1,0 +1,73 @@
+@mixin flexCenterVertical {
+    display: flex;
+    align-items: center;
+}
+
+.header_nav {
+    @include flexCenterVertical();
+    justify-content: center;
+    gap: 30.5px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #222222;
+
+    .header-nav_list {
+        @include flexCenterVertical();
+        gap: 10px;
+        padding: 2px 10px;
+        border-radius: 24px;
+        cursor: pointer;
+
+    }
+
+    .header-nav_list-icon {
+        position: relative;
+        @include flexCenterVertical();
+        gap: 10px;
+        padding: 2px 10px;
+        border-radius: 24px;
+        background: linear-gradient(90deg, #222222 39.69%, rgba(34, 34, 34, 0) 82.86%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        cursor: pointer;
+
+        .header-nav_icon {
+            position: absolute;
+            right: 10px;
+            top: 4px;
+            width: 19px;
+            height: 19px;
+            background-image: url(../../../assets/image/svg/strelka.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 45%;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+
+    }
+
+    .header-nav_list-icon:hover {
+        .header-nav_icon {
+            background-color: #F1F1F1;
+        }
+    }
+
+    .header-nav_list:hover {
+        background-color: #F1F1F1;
+    }
+
+}
+
+
+@media (max-width:1250px) {
+    .header_nav {
+        gap: 5px;
+    }
+}
