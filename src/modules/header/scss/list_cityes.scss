@@ -1,0 +1,142 @@
+@mixin backgroundImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin font {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+}
+
+@mixin fontButton {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.header-city {
+    width: 384px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    background: #FBFBFB;
+    box-shadow: 0px 7px 38px rgba(44, 62, 106, 0.25);
+    border-radius: 10px;
+    padding-top: 24px;
+    z-index: 10;
+    opacity: 0;
+    transition: ease-in-out 0.3s all;
+
+    .list-cityes-input-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 15px;
+        border-bottom: solid 1px #D8D8D8;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        .list-cityes-input-cloused-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+            height: 48px;
+            border: 2px solid #ABC8EA;
+            border-radius: 100px;
+            padding-left: 25px;
+            padding-right: 17px;
+
+
+            .list-cityes-input {
+                height: 48px;
+                width: 100%;
+                @include font();
+
+            }
+
+            .list-cityes-input-icon {
+                display: none;
+                width: 14px;
+                height: 14px;
+                background-image: url(../../../assets/image/svg/close_24px.svg);
+                @include backgroundImg();
+
+            }
+
+            .list-cityes-input-icon-active {
+                display: flex;
+            }
+
+        }
+
+    }
+
+    .list-cityes {
+        max-height: 200px;
+        overflow: auto;
+
+        .city {
+            @include font();
+            padding: 8px 10px 10px 32px;
+            cursor: pointer;
+        }
+
+        .city:hover {
+            background-color: #F1F1F1;
+        }
+    }
+
+    .header-cityes-button {
+        height: 48px;
+        @include fontButton();
+        background-color: #0656B4;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+    }
+
+
+}
+
+.header-city:hover {
+    .header_sity-svg {
+        display: none;
+    }
+}
+
+.header-city-active {
+    opacity: 1;
+}
+
+
+::-webkit-input-placeholder {
+    color: #767676;
+
+}
+
+:-moz-placeholder {
+    color: #767676;
+
+}
+
+::-moz-placeholder {
+    color: #767676;
+
+}
+
+:-ms-input-placeholder {
+    color: #767676;
+}

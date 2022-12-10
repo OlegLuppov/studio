@@ -18,10 +18,14 @@
     align-items: center;
 }
 
+
+
 .header_search {
     height: 48px;
     @include flexCenterVertical();
     gap: 61px;
+
+
 
     .header_title-wrapper {
         height: 32px;
@@ -38,9 +42,13 @@
         }
 
         .header_sity-wrapper {
-            @include flexCenterVertical();
-            gap: 8px;
-            cursor: pointer;
+            position: relative;
+
+            .header_sity-wrapper-hover {
+                @include flexCenterVertical();
+                gap: 8px;
+                cursor: pointer;
+            }
 
 
             .header_sity-svg {
@@ -66,12 +74,14 @@
             }
 
             .header_sity-title {
-                @include font()
+                @include font();
             }
+
         }
     }
 
-    .header_sity-wrapper:hover {
+
+    .header_sity-wrapper-hover:hover {
         .header_sity-svg {
             background-color: #F1F1F1;
         }
@@ -129,6 +139,8 @@
     }
 
 }
+
+
 
 @media (max-width:1250px) {
     .header_search {

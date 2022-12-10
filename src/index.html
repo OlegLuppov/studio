@@ -6,16 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>studio</title>
   </head>
+
   <body>
     <div class="container">
       <header>
+        <section class="header-mobile-first">
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a class="header_logo" href="#"></a>
+          <div class="like_wrapper">
+            <div class="like_svg"></div>
+            <span class="counter_like">1</span>
+          </div>
+        </section>
         <section class="header_wrapper-account">
           <div class="header_search">
             <div class="header_title-wrapper">
               <a class="header_logo" href="#"> </a>
               <div class="header_sity-wrapper">
-                <i class="header_sity-svg"></i>
-                <span class="header_sity-title">Москва</span>
+                <div class="header_sity-wrapper-hover">
+                  <i class="header_sity-svg"></i>
+                  <span class="header_sity-title">Москва</span>
+                </div>
+                <form class="header-city">
+                  <div class="list-cityes-input-wrapper">
+                    <div class="list-cityes-input-cloused-wrapper">
+                      <input class="list-cityes-input" autofocus type="text" placeholder="Регион, город, населенный пункт" />
+                      <i class="list-cityes-input-icon"></i>
+                    </div>
+                  </div>
+                  <ul class="list-cityes">
+                    <li class="city">cascasca</li>
+                    <li class="city">aascas</li>
+                    <li class="city">aascas</li>
+                    <li class="city">aascas</li>
+                    <li class="city">aascas</li>
+                    <li class="city">aascas</li>
+                  </ul>
+                  <button class="header-cityes-button">Сохранить</button>
+                </form>
               </div>
             </div>
             <div class="header_search-item">
@@ -53,6 +85,9 @@
           </nav>
         </section>
       </header>
+      <main>
+        <div class="city"></div>
+      </main>
     </div>
   </body>
 </html>
