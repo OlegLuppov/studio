@@ -94,6 +94,10 @@
             cursor: pointer;
         }
 
+        .hide {
+            display: none;
+        }
+
         .city:hover {
             background-color: #F1F1F1;
         }
@@ -139,4 +143,9 @@
 
 :-ms-input-placeholder {
     color: #767676;
+}
+
+mark {
+    color: #0656B4;
+    ;
 }
