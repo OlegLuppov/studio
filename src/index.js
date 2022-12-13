@@ -6,6 +6,8 @@ import './modules/Header/scss/header_avtorization.scss'
 import './modules/Header/scss/header_nav.scss'
 import './modules/Header/scss/header_mobail.scss'
 import './modules/Header/scss/list_cityes.scss'
+import 'simplebar'
+import './modules/Header/scss/header_simplebar.scss'
 
 import './modules/Header/js/header_cityes_toggler'
 import './modules/Header/js/header_cityes_filter'

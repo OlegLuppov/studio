@@ -38,6 +38,7 @@ class Inputs {
       arrElem.forEach((el) => {
         if (el.innerText.search(newValue) === -1) {
           el.classList.add('hide')
+          el.innerHTML = el.innerText
         } else {
           el.classList.remove('hide')
           let str = el.innerText
@@ -47,6 +48,7 @@ class Inputs {
     } else {
       arrElem.forEach((el) => {
         el.classList.remove('hide')
+        el.innerHTML = el.innerText
       })
     }
   }
