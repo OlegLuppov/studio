@@ -1,6 +1,9 @@
 class Inputs {
   showElemApies = async (options) => {
     if (options.arr.length === 0) {
+      options.listParent.classList.remove('list-cityes-completed')
+      options.preloader.classList.remove('load-spinner-wrapper-active')
+
       const response = await fetch(options.PATH, {
         method: 'POST',
       })
@@ -25,6 +28,10 @@ class Inputs {
           options.list.append(li)
         }
       })
+    }
+    if (options.arr.length !== 0) {
+      options.listParent.classList.add('list-cityes-completed')
+      options.preloader.classList.add('load-spinner-wrapper-active')
     }
   }
 

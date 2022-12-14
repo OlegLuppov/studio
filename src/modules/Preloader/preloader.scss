@@ -1,0 +1,45 @@
+@keyframes ldio-wrapper {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+.load-spinner-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background: #FBFBFB;
+
+
+    .spinner-wrapper {
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+
+        .spinner {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 5px solid #ABC8EA;
+            border-top-color: transparent;
+            border-radius: 50%;
+            box-sizing: content-box;
+            animation: ldio-wrapper 1s linear infinite;
+            top: 50px;
+            left: 50%
+        }
+    }
+}
+
+.load-spinner-wrapper-active {
+    display: none;
+}

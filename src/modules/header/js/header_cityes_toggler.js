@@ -9,6 +9,7 @@ const cityButton = document.querySelector('.header_sity-wrapper-hover')
 const searchCity = document.querySelector('.header-city')
 const listCityes = document.querySelector('.list-cityes')
 const simplebar = new SimpleBar(listCityes)
+const loader = document.querySelector('.load-spinner-wrapper')
 
 const simplebarContent = document.querySelector(`.${simplebar.classNames.contentEl}`)
 
@@ -16,8 +17,10 @@ const city = 'city'
 const optionsCityes = {
   PATH: CITYES,
   classElem: city,
+  listParent: listCityes,
   list: simplebarContent,
   arr: [],
+  preloader: loader,
 }
 
 cityButton.addEventListener('click', () => {
